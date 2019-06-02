@@ -1,5 +1,5 @@
 # Write your code here!
-def game_hash 
+def game_hash
   hash = {
   :home => {
     :team_name => "Brooklyn Nets",
@@ -119,7 +119,7 @@ name = "Brooke Lopez"
 home_players = game_hash[:home][:players]
 team = "Charlotte Hornets"
 
-def num_points_scored name 
+def num_points_scored name
   game_hash.each do |team_position, team_data|
     team_data[:players].each do |player_name, player_data|
     if player_name == name
@@ -137,21 +137,21 @@ game_hash.each do |team_position, team_data|
     if player_name == name
       return player_data[:shoe]
       elsif player_name =! name
-      return nil 
+      return nil
     end
   end
 end
 end
 
-def team_color team 
+def team_color team
  game_hash.each do |team_position, team_data|
    if team == team_data[:team_name]
      return team_data[:colors]
    end
  end
-end 
+end
 
-def team_names 
+def team_names
   team_array =[]
   team_array << game_hash[:home][:team_name]
   team_array << game_hash[:away][:team_name]
@@ -161,7 +161,7 @@ end
 def player_numbers team
   number_array = []
   game_hash.each do |team_position, team_data|
-    if team_data[:team_name] == team 
+    if team_data[:team_name] == team
         team_data[:players].each do |player_name, player_scores|
      number_array << player_scores[:points]
 
@@ -171,11 +171,11 @@ def player_numbers team
   number_array
 end
 
-def player_stats name 
+def player_stats name
   player_hash = {}
   game_hash.each do |team_position, team_data|
    return team_data[:players].each do |player_name, player_data|
-     if player_name == name 
+     if player_name == name
        return player_data
        elsif player_name =! name
        return nil
@@ -190,29 +190,18 @@ game_hash.each do |team_position, team_data|
     if player_name == name
       return player_data[:shoe]
       elsif player_name =! name
-      return nil 
+      return nil
     end
   end
 end
 end
 
 
-  
-  
 
 
-  
-  
-  
+
+
+
+
+
 end
-
-
-
-
-
-
-
-
-
-
-
