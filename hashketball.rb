@@ -153,8 +153,8 @@ end
 
 def team_names
   team_array =[]
-  team_array << game_hash[:home][:team_name]
-  team_array << game_hash[:away][:team_name]
+  team_array.push game_hash[:home][:team_name]
+  team_array.push game_hash[:away][:team_name]
   return team_array
 end
 
@@ -163,7 +163,7 @@ def player_numbers team
   game_hash.each do |team_position, team_data|
     if team_data[:team_name] == team
         team_data[:players].each do |player_name, player_scores|
-     number_array << player_scores[:points]
+     number_array.push player_scores[:points]
 
       end
     end
@@ -194,14 +194,4 @@ game_hash.each do |team_position, team_data|
     end
   end
 end
-end
-
-
-
-
-
-
-
-
-
 end
